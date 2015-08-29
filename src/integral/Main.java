@@ -10,6 +10,9 @@ public class Main {
 
     private void run() {
         IntegralCalculator calculator = new IntegralCalculator(0, Math.PI, 100000000, new MyFunction());
-        System.out.println(calculator.calculate());
+        long start = System.currentTimeMillis();
+        double result = calculator.calculate();
+        long finish = System.currentTimeMillis();
+        System.out.println(finish-start);
     }
 }
